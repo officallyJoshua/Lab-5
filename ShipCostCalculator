@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter price of item: ");
+        double itemPrice = scanner.nextDouble();
+
+        double shippingCost = (itemPrice >= 100) ? 0 : (0.02 * itemPrice);
+
+        double totalPrice = itemPrice + shippingCost;
+
+        System.out.println("Shipping cost: $" + String.format("%.2f", shippingCost));
+        System.out.println("total price: $" + String.format("%.2f", totalPrice));
+        scanner.close();
+    }
+}
